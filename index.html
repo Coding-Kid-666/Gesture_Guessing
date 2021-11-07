@@ -1,0 +1,82 @@
+ 
+<html>
+    <head>
+      <title>GESTURE RECOGNITION</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body>
+    <div class="container">
+        <audio id="song_lol" src="epic_song.mp3"></audio>
+      <center>
+        <h3 class="btn btn-warning heading">GESTURE RECOGNITION APP 
+          <br>
+          <span>👎</span>
+          <span>👌</span>
+          <span>👍</span>
+          <span>✌️</span>
+        </h3>
+        <br><br>
+  
+        <p style="font-size: 22px;">Take your selfie to generate emoji. There are some rules for best recognition:
+            <br>
+          <b style="color: yellow">1 - Make sure the camera is facing a wall.</b>
+          <br>
+          <b style="color: black">2 - Only show the hand in the camera, you shouldn't be visible.</b>
+          <br>
+          <b style="color: red">3 - There should be a distance of 30 cm between webcam and your hand.</b>
+          <br>
+        </p>
+        <br>
+        <h4 class="btn btn-danger tbu">
+            Gestures best identified:
+            <br>
+            <span>👎</span>
+            <span>✌</span>
+            <span>👍</span>
+        </h4>
+        <br>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Webcam View - </label>
+          <br><br>
+          <div id="camera"></div>
+          <br>
+          <br>
+          <button onclick="takeSnapshot();" class="btn btn-info">Capture Image 📸</button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <h3>The PREDICTIONS! 🔮</h3>
+          <br><br>
+          <label>Prediction! </label>
+          <p class="emotion_name" id="result_emotion_name"></p>
+        </div>
+        <div>
+          <div class="col-md-4 col-sm-12 col-xs-12">
+            <label>Snapshot taken - </label>
+            <div id="result">
+            </div>
+            <br>
+            <br>
+            <button class="btn btn-success" onclick="check()">Predict Gesture 🤓</button>
+          </div>
+        </div>
+        <p id="ok_lol" style="visibility: hidden;">Music - <a href="https://www.youtube.com/watch?v=TyWuxwqc_uY" target="_blank">https://www.youtube.com/watch?v=TyWuxwqc_uY</a> </p>
+        <h3 style="color: white;">After predicting one gesture, you won't be able to predict another one. So, you can reload the page to predict another gesture.</h3>
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html>
+  
+   
